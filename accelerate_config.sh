@@ -5,22 +5,31 @@
 CFAL_COMMON_SOURCED=1
 
 # Names of folders containing accelerate-llvm and accelerate-llvm-native
-PACKAGES=(accelerate-llvm accelerate-llvm-sharded)
+PACKAGES=(accelerate-llvm-old accelerate-llvm accelerate-llvm-folds accelerate-llvm-folds-shards-128 accelerate-llvm-TSS)
 
 # Name of the accelerate-llvm variant that will be displayed in results
 declare -A PKG_NAMES=(
-  [accelerate-llvm]="Self Scheduling (Current)"
-  [accelerate-llvm-sharded]="Sharded Self Scheduling"
+  [accelerate-llvm-old]="Self Scheduling (Current)"
+  [accelerate-llvm]="Sharded Self Scheduling"
+  [accelerate-llvm-folds]="Sharded Folds"
+  [accelerate-llvm-folds-shards-128]="Sharded Folds (128 shards)"
+  [accelerate-llvm-TSS]="Trapezoid Self Scheduling"
 )
 
 declare -A PKG_COLORS=(
-  [accelerate-llvm]="#e41a1c"
-  [accelerate-llvm-sharded]="#377eb8"
+  [accelerate-llvm-old]="#e41a1c"
+  [accelerate-llvm]="#377eb8"
+  [accelerate-llvm-folds]="#4daf4a"
+  [accelerate-llvm-folds-shards-128]="#ff7f00"
+  [accelerate-llvm-TSS]="#984ea3"
 )
 
 declare -A PKG_POINTTYPE=(
-  [accelerate-llvm]="7"
-  [accelerate-llvm-sharded]="2"
+  [accelerate-llvm-old]="7"
+  [accelerate-llvm]="2"
+  [accelerate-llvm-folds]="3"
+  [accelerate-llvm-folds-shards-128]="1"
+  [accelerate-llvm-TSS]="4"
 )
 
 CRITERION_FLAGS=""
