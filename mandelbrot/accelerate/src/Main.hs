@@ -12,6 +12,8 @@ import Data.Array.Accelerate.Data.Colour.Names            as A
 
 import Data.Array.Accelerate.LLVM.Native                  as CPU
 -- import Data.Array.Accelerate.LLVM.PTX                     as PTX
+import Criterion
+import Criterion.Main
 
 import qualified Prelude                                  as P
 
@@ -22,8 +24,9 @@ mandelbrot
     -> Float                -- ^ divergence radius
     -> Complex Float        -- ^ view centre
     -> Float                -- ^ view width
+    -> Acc (Array DIM1 Int)
     -> Acc (Array DIM2 (Complex Float, Int))
-mandelbrot screenX screenY limit radius (x0 :+ y0) width =
+mandelbrot screenX screenY limit radius (x0 :+ y0) width _ =
   A.generate (A.constant (Z :. screenY :. screenX))
              (\ix -> let z0 = complexOfPixel ix
                          zn = while (\zi -> snd zi       < constant limit
@@ -138,13 +141,21 @@ linear (x0,x1) (y0,y1) x =
 main :: P.IO ()
 main =
   let
-      width   = 800
-      height  = 600
+      screenX = 800
+      screenY = 600
       limit   = 1000
       radius  = 256
-      --
-      img = A.map packRGB
-          $ A.map (escapeToColour limit)
-          $ mandelbrot width height limit radius ((-0.7) :+ 0) 3.067
+      x0      = -0.7
+      y0      = 0.0
+      width   = 3.067
+      
+      img = CPU.runN 
+          $ A.map packRGB
+          . A.map (escapeToColour limit)
+          . mandelbrot screenX screenY limit radius (x0 :+ y0) width
   in
-  P.print $ CPU.runN img
+  defaultMain [
+    bgroup "mandelbrot" [
+      bench "" $ nf img (A.fromList (A.Z A.:. 0) [])
+    ]
+  ]
