@@ -5,31 +5,53 @@
 CFAL_COMMON_SOURCED=1
 
 # Names of folders containing accelerate-llvm and accelerate-llvm-native
-PACKAGES=(accelerate-llvm-old accelerate-llvm accelerate-llvm-folds accelerate-llvm-folds-shards-128 accelerate-llvm-TSS)
+PACKAGES=(accelerate-llvm-folds accelerate-llvm-folds-0.5 accelerate-llvm-folds-2 accelerate-llvm-folds-shards-128 accelerate-llvm-folds-shards-128-0.5 accelerate-llvm-folds-shards-128-2)
+# PACKAGES=(accelerate-llvm accelerate-llvm-shard accelerate-llvm-folds accelerate-llvm-folds-shards-128 accelerate-llvm-TSS)
+# PACKAGES=(accelerate-llvm-fix accelerate-llvm-folds)
+
+BASELINE="accelerate-llvm-folds"
 
 # Name of the accelerate-llvm variant that will be displayed in results
 declare -A PKG_NAMES=(
-  [accelerate-llvm-old]="Self Scheduling (Current)"
-  [accelerate-llvm]="Sharded Self Scheduling"
+  [accelerate-llvm]="Self Scheduling (Current)"
+  [accelerate-llvm-fix]="Self Scheduling (Current)"
+  [accelerate-llvm-shard]="Sharded Self Scheduling"
   [accelerate-llvm-folds]="Sharded Folds"
+  [accelerate-llvm-folds-0.5]="Sharded Folds (0.5x tileSize)"
+  [accelerate-llvm-folds-2]="Sharded Folds (2x tileSize)"
   [accelerate-llvm-folds-shards-128]="Sharded Folds (128 shards)"
+  [accelerate-llvm-folds-shards-128-0.5]="Sharded Folds (128 shards 0.5x tileSize)"
+  [accelerate-llvm-folds-shards-128-2]="Sharded Folds (128 shards 2x tileSize)"
   [accelerate-llvm-TSS]="Trapezoid Self Scheduling"
+  [accelerate-llvm-numa]="Assist NUMA First"
 )
 
 declare -A PKG_COLORS=(
-  [accelerate-llvm-old]="#e41a1c"
-  [accelerate-llvm]="#377eb8"
+  [accelerate-llvm]="#e41a1c"
+  [accelerate-llvm-fix]="#e41a1c"
+  [accelerate-llvm-shard]="#377eb8"
   [accelerate-llvm-folds]="#4daf4a"
+  [accelerate-llvm-folds-0.5]="#f8fc00"
+  [accelerate-llvm-folds-2]="#00fcf0"
   [accelerate-llvm-folds-shards-128]="#ff7f00"
+  [accelerate-llvm-folds-shards-128-0.5]="#fc00c6"
+  [accelerate-llvm-folds-shards-128-2]="#fc000d"
   [accelerate-llvm-TSS]="#984ea3"
+  [accelerate-llvm-numa]="#ffff33"
 )
 
 declare -A PKG_POINTTYPE=(
-  [accelerate-llvm-old]="7"
-  [accelerate-llvm]="2"
+  [accelerate-llvm]="7"
+  [accelerate-llvm-fix]="7"
+  [accelerate-llvm-shard]="2"
   [accelerate-llvm-folds]="3"
+  [accelerate-llvm-folds-0.5]="2"
+  [accelerate-llvm-folds-2]="6"
   [accelerate-llvm-folds-shards-128]="1"
+  [accelerate-llvm-folds-shards-128-0.5]="4"
+  [accelerate-llvm-folds-shards-128-2]="5"
   [accelerate-llvm-TSS]="4"
+  [accelerate-llvm-numa]="5"
 )
 
 CRITERION_FLAGS=""
@@ -256,6 +278,16 @@ plot() {
   # Extract title information from filename
   title=$(echo "$basename" | sed 's/_/ /g' | sed 's/benchmark //')
 
+  # Get baseline time for 1 thread
+  baseline_name="${PKG_NAMES[$BASELINE]}"
+  baseline_time=$(awk -v FPAT='[^,]*|("([^"]|"")*")' -v OFS=',' -v sched="$baseline_name" \
+      'NR>1 && NF>=9 && $8==sched && $9==1 { print $2; exit }' "$csv_file")
+
+  if [ -z "$baseline_time" ] || [ "$baseline_time" == "0" ]; then
+      echo "Error: Could not find baseline time for $baseline_name with 1 thread"
+      exit 1
+  fi
+
   # Create temporary data files for each scheduler
   declare -a data_files
   declare -a plot_commands
@@ -268,12 +300,17 @@ plot() {
     data_file=$(mktemp)
     data_files+=("$data_file")
 
-    awk -v FPAT='[^,]*|("([^"]|"")*")' -v OFS=',' -v sched="$name" \
-        'NR>1 && NF>=9 && $8==sched { print $9, $2, $5 }' "$csv_file" > "$data_file"
+    awk -v FPAT='[^,]*|("([^"]|"")*")' -v OFS=',' -v sched="$name" -v baseline="$baseline_time" \
+        'NR>1 && NF>=9 && $8==sched { 
+            speedup = baseline / $2
+            speedup_lb = baseline / $3
+            speedup_ub = baseline / $4
+            error = (speedup_lb - speedup_ub) / 2
+            print $9, speedup, error
+        }' "$csv_file" > "$data_file"
 
     plot_commands+=("'$data_file' using 1:2:3 with errorbars linecolor rgb '$color' linewidth 2 pointtype $pointtype pointsize 1.2 title \"$name\"")
     plot_commands+=("'$data_file' using 1:2 with linespoints linecolor rgb '$color' linewidth 2 pointtype $pointtype pointsize 1.2 notitle")
-
   done
 
   gnuplot_script=$(mktemp)
@@ -282,12 +319,12 @@ plot() {
   set terminal svg size 1200,800 enhanced font 'Arial,12'
   set output '$output_file'
 
-  set title "$title Performance Comparison" font 'Arial,14'
+  set title "$title" font 'Arial,14'
   set xlabel "Number of Threads"
-  set ylabel "Mean Execution Time (seconds)"
+  set ylabel "Speedup"
 
   set grid
-  set key top right
+  set key top left
 
   set lmargin 10
   set rmargin 3
