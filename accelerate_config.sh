@@ -5,7 +5,7 @@
 CFAL_COMMON_SOURCED=1
 
 # Names of folders containing accelerate-llvm and accelerate-llvm-native
-PACKAGES=(accelerate-llvm-folds accelerate-llvm-folds-0.5 accelerate-llvm-folds-2 accelerate-llvm-folds-shards-128 accelerate-llvm-folds-shards-128-0.5 accelerate-llvm-folds-shards-128-2)
+PACKAGES=(accelerate-llvm-folds-0.5 accelerate-llvm-folds accelerate-llvm-folds-2 accelerate-llvm-folds-shards-128-0.5 accelerate-llvm-folds-shards-128 accelerate-llvm-folds-shards-128-2)
 # PACKAGES=(accelerate-llvm accelerate-llvm-shard accelerate-llvm-folds accelerate-llvm-folds-shards-128 accelerate-llvm-TSS)
 # PACKAGES=(accelerate-llvm-fix accelerate-llvm-folds)
 
@@ -16,12 +16,12 @@ declare -A PKG_NAMES=(
   [accelerate-llvm]="Self Scheduling (Current)"
   [accelerate-llvm-fix]="Self Scheduling (Current)"
   [accelerate-llvm-shard]="Sharded Self Scheduling"
-  [accelerate-llvm-folds]="Sharded Folds"
-  [accelerate-llvm-folds-0.5]="Sharded Folds (0.5x tileSize)"
-  [accelerate-llvm-folds-2]="Sharded Folds (2x tileSize)"
-  [accelerate-llvm-folds-shards-128]="Sharded Folds (128 shards)"
-  [accelerate-llvm-folds-shards-128-0.5]="Sharded Folds (128 shards 0.5x tileSize)"
-  [accelerate-llvm-folds-shards-128-2]="Sharded Folds (128 shards 2x tileSize)"
+  [accelerate-llvm-folds]="1x Shard 1x TileSize"
+  [accelerate-llvm-folds-0.5]="1x Shard 0.5x TileSize"
+  [accelerate-llvm-folds-2]="1x Shard 2x TileSize"
+  [accelerate-llvm-folds-shards-128]="2x Shard 1x TileSize"
+  [accelerate-llvm-folds-shards-128-0.5]="2x Shard 0.5x TileSize"
+  [accelerate-llvm-folds-shards-128-2]="2x Shard 2x TileSize"
   [accelerate-llvm-TSS]="Trapezoid Self Scheduling"
   [accelerate-llvm-numa]="Assist NUMA First"
 )
@@ -316,7 +316,7 @@ plot() {
   gnuplot_script=$(mktemp)
 
   cat > "$gnuplot_script" << EOF
-  set terminal svg size 1200,800 enhanced font 'Arial,12'
+  set terminal svg size 600,400 enhanced font 'Arial,12'
   set output '$output_file'
 
   set title "$title" font 'Arial,14'
@@ -324,8 +324,8 @@ plot() {
   set ylabel "Speedup"
 
   set grid
-  set key top left
-
+  set key top left Left reverse  
+  
   set lmargin 10
   set rmargin 3
   set tmargin 3
