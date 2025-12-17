@@ -1,6 +1,7 @@
 #!/bin/bash
 
-(cd "quickhull/accelerate" && bash bench.sh "$@") || { echo "Failed to bench quickhull"; exit 1; }
+(cd "mandelbrot/accelerate" && bash bench.sh "$@") || { echo "Failed to bench mandelbrot"; exit 1; }
+# (cd "quickhull/accelerate" && bash bench.sh "$@") || { echo "Failed to bench quickhull"; exit 1; }
 (cd "folds/accelerate" && bash bench.sh "$@") || { echo "Failed to bench folds"; exit 1; }
 (cd "primes/accelerate" && bash bench.sh "$@") || { echo "Failed to bench primes"; exit 1; }
 (cd "MG/accelerate" && bash bench.sh "$@") || { echo "Failed to bench MG"; exit 1; }

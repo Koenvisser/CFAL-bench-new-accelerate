@@ -5,21 +5,22 @@
 CFAL_COMMON_SOURCED=1
 
 # Names of folders containing accelerate-llvm and accelerate-llvm-native
-PACKAGES=(accelerate-llvm-folds-0.5 accelerate-llvm-folds accelerate-llvm-folds-2 accelerate-llvm-folds-shards-128-0.5 accelerate-llvm-folds-shards-128 accelerate-llvm-folds-shards-128-2)
-# PACKAGES=(accelerate-llvm accelerate-llvm-shard accelerate-llvm-folds accelerate-llvm-folds-shards-128 accelerate-llvm-TSS)
+# PACKAGES=(accelerate-llvm-folds-0.5 accelerate-llvm-folds accelerate-llvm-folds-2 accelerate-llvm-folds-shards-128-0.5 accelerate-llvm-folds-shards-128 accelerate-llvm-folds-shards-128-2)
+# PACKAGES=(accelerate-llvm accelerate-llvm-folds-shards-128 accelerate-llvm-TSS)
+PACKAGES=(accelerate-llvm accelerate-llvm-folds-shards-128 accelerate-llvm-TSS)
 # PACKAGES=(accelerate-llvm-fix accelerate-llvm-folds)
 
-BASELINE="accelerate-llvm-folds"
+BASELINE="accelerate-llvm"
 
 # Name of the accelerate-llvm variant that will be displayed in results
 declare -A PKG_NAMES=(
   [accelerate-llvm]="Self Scheduling (Current)"
   [accelerate-llvm-fix]="Self Scheduling (Current)"
-  [accelerate-llvm-shard]="Sharded Self Scheduling"
+  [accelerate-llvm-shard]="Sharded Self Scheduling (old)"
   [accelerate-llvm-folds]="1x Shard 1x TileSize"
   [accelerate-llvm-folds-0.5]="1x Shard 0.5x TileSize"
   [accelerate-llvm-folds-2]="1x Shard 2x TileSize"
-  [accelerate-llvm-folds-shards-128]="2x Shard 1x TileSize"
+  [accelerate-llvm-folds-shards-128]="Sharded Self Scheduling"
   [accelerate-llvm-folds-shards-128-0.5]="2x Shard 0.5x TileSize"
   [accelerate-llvm-folds-shards-128-2]="2x Shard 2x TileSize"
   [accelerate-llvm-TSS]="Trapezoid Self Scheduling"
