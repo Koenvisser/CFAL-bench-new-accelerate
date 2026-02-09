@@ -5,23 +5,25 @@
 CFAL_COMMON_SOURCED=1
 
 # Names of folders containing accelerate-llvm and accelerate-llvm-native
-PACKAGES=(accelerate-llvm-folds-0.5 accelerate-llvm-folds accelerate-llvm-folds-2 accelerate-llvm-folds-shards-128-0.5 accelerate-llvm-folds-shards-128 accelerate-llvm-folds-shards-128-2)
-# PACKAGES=(accelerate-llvm accelerate-llvm-shard accelerate-llvm-folds accelerate-llvm-folds-shards-128 accelerate-llvm-TSS)
+# PACKAGES=(accelerate-llvm-folds-0.5 accelerate-llvm-folds accelerate-llvm-folds-2 accelerate-llvm-folds-shards-128-0.5 accelerate-llvm-folds-shards-128 accelerate-llvm-folds-shards-128-2)
+# PACKAGES=(accelerate-llvm accelerate-llvm-folds-shards-128 accelerate-llvm-TSS)
+# PACKAGES=(accelerate-llvm-folds-shards-128 accelerate-llvm-simple)
+PACKAGES=(accelerate-llvm-folds-64 accelerate-llvm-folds-64-0.5 accelerate-llvm-folds-64-2 accelerate-llvm-folds-128 accelerate-llvm-folds-128-0.5 accelerate-llvm-folds-128-2 accelerate-llvm-folds-256)
 # PACKAGES=(accelerate-llvm-fix accelerate-llvm-folds)
 
-BASELINE="accelerate-llvm-folds"
+BASELINE="accelerate-llvm-folds-128"
 
 # Name of the accelerate-llvm variant that will be displayed in results
 declare -A PKG_NAMES=(
   [accelerate-llvm]="Self Scheduling (Current)"
   [accelerate-llvm-fix]="Self Scheduling (Current)"
-  [accelerate-llvm-shard]="Sharded Self Scheduling"
-  [accelerate-llvm-folds]="1x Shard 1x TileSize"
-  [accelerate-llvm-folds-0.5]="1x Shard 0.5x TileSize"
-  [accelerate-llvm-folds-2]="1x Shard 2x TileSize"
-  [accelerate-llvm-folds-shards-128]="2x Shard 1x TileSize"
-  [accelerate-llvm-folds-shards-128-0.5]="2x Shard 0.5x TileSize"
-  [accelerate-llvm-folds-shards-128-2]="2x Shard 2x TileSize"
+  [accelerate-llvm-folds-64]="64 Shards 1x TileSize"
+  [accelerate-llvm-folds-64-0.5]="64 Shards 0.5x TileSize"
+  [accelerate-llvm-folds-64-2]="64 Shards 2x TileSize"
+  [accelerate-llvm-folds-128]="128 Shards 1x TileSize"
+  [accelerate-llvm-folds-128-0.5]="128 Shards 0.5x TileSize"
+  [accelerate-llvm-folds-128-2]="128 Shards 2x TileSize"
+  [accelerate-llvm-folds-256]="256 Shards 1x TileSize"
   [accelerate-llvm-TSS]="Trapezoid Self Scheduling"
   [accelerate-llvm-numa]="Assist NUMA First"
 )
@@ -29,13 +31,13 @@ declare -A PKG_NAMES=(
 declare -A PKG_COLORS=(
   [accelerate-llvm]="#e41a1c"
   [accelerate-llvm-fix]="#e41a1c"
-  [accelerate-llvm-shard]="#377eb8"
-  [accelerate-llvm-folds]="#4daf4a"
-  [accelerate-llvm-folds-0.5]="#f8fc00"
-  [accelerate-llvm-folds-2]="#00fcf0"
-  [accelerate-llvm-folds-shards-128]="#ff7f00"
-  [accelerate-llvm-folds-shards-128-0.5]="#fc00c6"
-  [accelerate-llvm-folds-shards-128-2]="#fc000d"
+  [accelerate-llvm-folds-64]="#4daf4a"
+  [accelerate-llvm-folds-64-0.5]="#f8fc00"
+  [accelerate-llvm-folds-64-2]="#00fcf0"
+  [accelerate-llvm-folds-128]="#ff7f00"
+  [accelerate-llvm-folds-128-0.5]="#fc00c6"
+  [accelerate-llvm-folds-128-2]="#fc000d"
+  [accelerate-llvm-folds-256]="#a65628"
   [accelerate-llvm-TSS]="#984ea3"
   [accelerate-llvm-numa]="#ffff33"
 )
@@ -44,14 +46,16 @@ declare -A PKG_POINTTYPE=(
   [accelerate-llvm]="7"
   [accelerate-llvm-fix]="7"
   [accelerate-llvm-shard]="2"
-  [accelerate-llvm-folds]="3"
-  [accelerate-llvm-folds-0.5]="2"
-  [accelerate-llvm-folds-2]="6"
-  [accelerate-llvm-folds-shards-128]="1"
-  [accelerate-llvm-folds-shards-128-0.5]="4"
-  [accelerate-llvm-folds-shards-128-2]="5"
+  [accelerate-llvm-folds-64]="3"
+  [accelerate-llvm-folds-64-0.5]="2"
+  [accelerate-llvm-folds-64-2]="6"
+  [accelerate-llvm-folds-128]="1"
+  [accelerate-llvm-folds-128-0.5]="4"
+  [accelerate-llvm-folds-128-2]="5"
+  [accelerate-llvm-folds-256]="8"
   [accelerate-llvm-TSS]="4"
   [accelerate-llvm-numa]="5"
+  [accelerate-llvm-simple]="8"
 )
 
 CRITERION_FLAGS=""
