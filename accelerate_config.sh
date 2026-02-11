@@ -278,6 +278,7 @@ plot() {
   basename=$(basename "$csv_file" .csv)
   path=$(dirname "$csv_file")
   output_file="${path}/${basename}.svg"
+  output_file_key="${path}/key.svg"
 
   # Extract title information from filename
   title=$(echo "$basename" | sed 's/_/ /g' | sed 's/benchmark //')
@@ -320,7 +321,7 @@ plot() {
   gnuplot_script=$(mktemp)
 
   cat > "$gnuplot_script" << EOF
-  set terminal svg size 600,400 enhanced font 'Arial,12'
+  set terminal svg size 450,300 enhanced font 'Arial,12'
   set output '$output_file'
 
   set title "$title" font 'Arial,14'
@@ -328,8 +329,8 @@ plot() {
   set ylabel "Speedup"
 
   set grid
-  set key top left Left reverse  
-  
+  set key off    
+
   set lmargin 10
   set rmargin 3
   set tmargin 3
@@ -346,14 +347,39 @@ plot() {
 
 EOF
 
+  gnuplot_script_key=$(mktemp)
+
+  cat > "$gnuplot_script_key" << EOF
+  set terminal svg size 250,120 enhanced font 'Arial,12'
+  set output '$output_file_key'
+
+  set grid
+  set key top left Left reverse    
+  set noborder
+  set noxtics
+  set noytics
+  set notitle
+  set noxlabel
+  set noylabel
+
+  set xrange [-10:-9]
+  set yrange [-10:-9]
+  set xtics ($(IFS=', '; echo "${THREAD_COUNTS[*]}"))
+
+  set datafile sep ','
+  # Plot using temporary data files
+  plot $(IFS=', \\'; echo "${plot_commands[*]}")
+EOF
+
   # Run gnuplot
   if command -v gnuplot >/dev/null 2>&1; then
       gnuplot "$gnuplot_script"
+      gnuplot "$gnuplot_script_key"
   else
       echo "Error: gnuplot not found. Please install gnuplot first."
       echo "On Ubuntu/Debian: sudo apt install gnuplot"
       exit 1
   fi
 
-    rm "$gnuplot_script" "${data_files[@]}"
+    rm "$gnuplot_script" "${data_files[@]}" "$gnuplot_script_key"
 }
