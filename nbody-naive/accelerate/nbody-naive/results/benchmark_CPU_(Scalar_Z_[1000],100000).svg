@@ -321,107 +321,107 @@
 <g fill="none" color="white" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(228,  26,  28)'  d='M83.90,194.40 L88.40,194.40 M83.90,194.40 L88.40,194.40 M116.89,151.44 L116.89,151.36 M112.39,151.44 L121.39,151.44
-		M112.39,151.36 L121.39,151.36 M160.88,114.35 M156.38,114.35 L165.38,114.35 M156.38,114.35 L165.38,114.35 M204.87,86.32
-		L204.87,86.28 M200.37,86.32 L209.37,86.32 M200.37,86.28 L209.37,86.28 M248.86,84.50 L248.86,84.14 M244.36,84.50
-		L253.36,84.50 M244.36,84.14 L253.36,84.14 M292.85,79.28 L292.85,79.09 M288.35,79.28 L297.35,79.28 M288.35,79.09
-		L297.35,79.09 M336.84,88.99 L336.84,88.81 M332.34,88.99 L341.34,88.99 M332.34,88.81 L341.34,88.81 M380.83,101.24
-		M376.33,101.24 L385.33,101.24 M376.33,101.24 L385.33,101.24 M424.82,127.76 L424.82,126.71 M420.32,127.76 L424.82,127.76
-		M420.32,126.71 L424.82,126.71  '/></g>
+	<path stroke='rgb(228,  26,  28)'  d='M83.90,194.40 L88.40,194.40 M83.90,194.40 L88.40,194.40 M116.89,151.29 L116.89,151.27 M112.39,151.29 L121.39,151.29
+		M112.39,151.27 L121.39,151.27 M160.88,114.45 L160.88,114.43 M156.38,114.45 L165.38,114.45 M156.38,114.43 L165.38,114.43
+		M204.87,85.94 L204.87,85.90 M200.37,85.94 L209.37,85.94 M200.37,85.90 L209.37,85.90 M248.86,72.58 M244.36,72.58
+		L253.36,72.58 M244.36,72.58 L253.36,72.58 M292.85,82.16 M288.35,82.16 L297.35,82.16 M288.35,82.16 L297.35,82.16
+		M336.84,94.23 M332.34,94.23 L341.34,94.23 M332.34,94.23 L341.34,94.23 M380.83,109.24 L380.83,108.93 M376.33,109.24
+		L385.33,109.24 M376.33,108.93 L385.33,108.93 M424.82,117.89 M420.32,117.89 L424.82,117.89 M420.32,117.89 L424.82,117.89
+		 '/></g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<use xlink:href='#gpPt6' transform='translate(83.90,194.40) scale(5.40)' color='rgb(228,  26,  28)'/>
-	<use xlink:href='#gpPt6' transform='translate(116.89,151.40) scale(5.40)' color='rgb(228,  26,  28)'/>
-	<use xlink:href='#gpPt6' transform='translate(160.88,114.35) scale(5.40)' color='rgb(228,  26,  28)'/>
-	<use xlink:href='#gpPt6' transform='translate(204.87,86.30) scale(5.40)' color='rgb(228,  26,  28)'/>
-	<use xlink:href='#gpPt6' transform='translate(248.86,84.32) scale(5.40)' color='rgb(228,  26,  28)'/>
-	<use xlink:href='#gpPt6' transform='translate(292.85,79.19) scale(5.40)' color='rgb(228,  26,  28)'/>
-	<use xlink:href='#gpPt6' transform='translate(336.84,88.90) scale(5.40)' color='rgb(228,  26,  28)'/>
-	<use xlink:href='#gpPt6' transform='translate(380.83,101.24) scale(5.40)' color='rgb(228,  26,  28)'/>
-	<use xlink:href='#gpPt6' transform='translate(424.82,127.24) scale(5.40)' color='rgb(228,  26,  28)'/>
+	<use xlink:href='#gpPt6' transform='translate(116.89,151.28) scale(5.40)' color='rgb(228,  26,  28)'/>
+	<use xlink:href='#gpPt6' transform='translate(160.88,114.44) scale(5.40)' color='rgb(228,  26,  28)'/>
+	<use xlink:href='#gpPt6' transform='translate(204.87,85.92) scale(5.40)' color='rgb(228,  26,  28)'/>
+	<use xlink:href='#gpPt6' transform='translate(248.86,72.58) scale(5.40)' color='rgb(228,  26,  28)'/>
+	<use xlink:href='#gpPt6' transform='translate(292.85,82.16) scale(5.40)' color='rgb(228,  26,  28)'/>
+	<use xlink:href='#gpPt6' transform='translate(336.84,94.23) scale(5.40)' color='rgb(228,  26,  28)'/>
+	<use xlink:href='#gpPt6' transform='translate(380.83,109.08) scale(5.40)' color='rgb(228,  26,  28)'/>
+	<use xlink:href='#gpPt6' transform='translate(424.82,117.89) scale(5.40)' color='rgb(228,  26,  28)'/>
 </g>
 	</g>
 	<g id="gnuplot_plot_2" ><title>gnuplot_plot_2</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(228,  26,  28)'  d='M83.90,194.40 L116.89,151.40 L160.88,114.35 L204.87,86.30 L248.86,84.32 L292.85,79.19 L336.84,88.90 L380.83,101.24
-		L424.82,127.24  '/>	<use xlink:href='#gpPt6' transform='translate(83.90,194.40) scale(5.40)' color='rgb(228,  26,  28)'/>
-	<use xlink:href='#gpPt6' transform='translate(116.89,151.40) scale(5.40)' color='rgb(228,  26,  28)'/>
-	<use xlink:href='#gpPt6' transform='translate(160.88,114.35) scale(5.40)' color='rgb(228,  26,  28)'/>
-	<use xlink:href='#gpPt6' transform='translate(204.87,86.30) scale(5.40)' color='rgb(228,  26,  28)'/>
-	<use xlink:href='#gpPt6' transform='translate(248.86,84.32) scale(5.40)' color='rgb(228,  26,  28)'/>
-	<use xlink:href='#gpPt6' transform='translate(292.85,79.19) scale(5.40)' color='rgb(228,  26,  28)'/>
-	<use xlink:href='#gpPt6' transform='translate(336.84,88.90) scale(5.40)' color='rgb(228,  26,  28)'/>
-	<use xlink:href='#gpPt6' transform='translate(380.83,101.24) scale(5.40)' color='rgb(228,  26,  28)'/>
-	<use xlink:href='#gpPt6' transform='translate(424.82,127.24) scale(5.40)' color='rgb(228,  26,  28)'/>
+	<path stroke='rgb(228,  26,  28)'  d='M83.90,194.40 L116.89,151.28 L160.88,114.44 L204.87,85.92 L248.86,72.58 L292.85,82.16 L336.84,94.23 L380.83,109.08
+		L424.82,117.89  '/>	<use xlink:href='#gpPt6' transform='translate(83.90,194.40) scale(5.40)' color='rgb(228,  26,  28)'/>
+	<use xlink:href='#gpPt6' transform='translate(116.89,151.28) scale(5.40)' color='rgb(228,  26,  28)'/>
+	<use xlink:href='#gpPt6' transform='translate(160.88,114.44) scale(5.40)' color='rgb(228,  26,  28)'/>
+	<use xlink:href='#gpPt6' transform='translate(204.87,85.92) scale(5.40)' color='rgb(228,  26,  28)'/>
+	<use xlink:href='#gpPt6' transform='translate(248.86,72.58) scale(5.40)' color='rgb(228,  26,  28)'/>
+	<use xlink:href='#gpPt6' transform='translate(292.85,82.16) scale(5.40)' color='rgb(228,  26,  28)'/>
+	<use xlink:href='#gpPt6' transform='translate(336.84,94.23) scale(5.40)' color='rgb(228,  26,  28)'/>
+	<use xlink:href='#gpPt6' transform='translate(380.83,109.08) scale(5.40)' color='rgb(228,  26,  28)'/>
+	<use xlink:href='#gpPt6' transform='translate(424.82,117.89) scale(5.40)' color='rgb(228,  26,  28)'/>
 </g>
 	</g>
 	<g id="gnuplot_plot_3" ><title>Sharded Self Scheduling</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(255, 127,   0)'  d='M83.90,194.43 L88.40,194.43 M83.90,194.43 L88.40,194.43 M116.89,150.88 L116.89,150.85 M112.39,150.88 L121.39,150.88
-		M112.39,150.85 L121.39,150.85 M160.88,109.72 L160.88,109.65 M156.38,109.72 L165.38,109.72 M156.38,109.65 L165.38,109.65
-		M204.87,82.53 L204.87,82.46 M200.37,82.53 L209.37,82.53 M200.37,82.46 L209.37,82.46 M248.86,75.98 M244.36,75.98
-		L253.36,75.98 M244.36,75.98 L253.36,75.98 M292.85,79.67 M288.35,79.67 L297.35,79.67 M288.35,79.67 L297.35,79.67
-		M336.84,93.34 L336.84,93.26 M332.34,93.34 L341.34,93.34 M332.34,93.26 L341.34,93.26 M380.83,107.59 M376.33,107.59
-		L385.33,107.59 M376.33,107.59 L385.33,107.59 M424.82,119.45 L424.82,118.95 M420.32,119.45 L424.82,119.45 M420.32,118.95
-		L424.82,118.95  '/></g>
+	<path stroke='rgb(255, 127,   0)'  d='M83.90,194.43 L88.40,194.43 M83.90,194.43 L88.40,194.43 M116.89,151.03 L116.89,151.00 M112.39,151.03 L121.39,151.03
+		M112.39,151.00 L121.39,151.00 M160.88,110.15 L160.88,110.06 M156.38,110.15 L165.38,110.15 M156.38,110.06 L165.38,110.06
+		M204.87,82.77 M200.37,82.77 L209.37,82.77 M200.37,82.77 L209.37,82.77 M248.86,70.71 M244.36,70.71 L253.36,70.71
+		M244.36,70.71 L253.36,70.71 M292.85,79.21 L292.85,78.97 M288.35,79.21 L297.35,79.21 M288.35,78.97 L297.35,78.97
+		M336.84,91.20 M332.34,91.20 L341.34,91.20 M332.34,91.20 L341.34,91.20 M380.83,105.87 M376.33,105.87 L385.33,105.87
+		M376.33,105.87 L385.33,105.87 M424.82,120.37 L424.82,119.61 M420.32,120.37 L424.82,120.37 M420.32,119.61 L424.82,119.61
+		 '/></g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<use xlink:href='#gpPt0' transform='translate(83.90,194.43) scale(5.40)' color='rgb(255, 127,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(116.89,150.86) scale(5.40)' color='rgb(255, 127,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(160.88,109.68) scale(5.40)' color='rgb(255, 127,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(204.87,82.49) scale(5.40)' color='rgb(255, 127,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(248.86,75.98) scale(5.40)' color='rgb(255, 127,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(292.85,79.67) scale(5.40)' color='rgb(255, 127,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(336.84,93.30) scale(5.40)' color='rgb(255, 127,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(380.83,107.59) scale(5.40)' color='rgb(255, 127,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(424.82,119.20) scale(5.40)' color='rgb(255, 127,   0)'/>
+	<use xlink:href='#gpPt0' transform='translate(116.89,151.02) scale(5.40)' color='rgb(255, 127,   0)'/>
+	<use xlink:href='#gpPt0' transform='translate(160.88,110.11) scale(5.40)' color='rgb(255, 127,   0)'/>
+	<use xlink:href='#gpPt0' transform='translate(204.87,82.77) scale(5.40)' color='rgb(255, 127,   0)'/>
+	<use xlink:href='#gpPt0' transform='translate(248.86,70.71) scale(5.40)' color='rgb(255, 127,   0)'/>
+	<use xlink:href='#gpPt0' transform='translate(292.85,79.09) scale(5.40)' color='rgb(255, 127,   0)'/>
+	<use xlink:href='#gpPt0' transform='translate(336.84,91.20) scale(5.40)' color='rgb(255, 127,   0)'/>
+	<use xlink:href='#gpPt0' transform='translate(380.83,105.87) scale(5.40)' color='rgb(255, 127,   0)'/>
+	<use xlink:href='#gpPt0' transform='translate(424.82,119.99) scale(5.40)' color='rgb(255, 127,   0)'/>
 </g>
 	</g>
 	<g id="gnuplot_plot_4" ><title>gnuplot_plot_4</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(255, 127,   0)'  d='M83.90,194.43 L116.89,150.86 L160.88,109.68 L204.87,82.49 L248.86,75.98 L292.85,79.67 L336.84,93.30 L380.83,107.59
-		L424.82,119.20  '/>	<use xlink:href='#gpPt0' transform='translate(83.90,194.43) scale(5.40)' color='rgb(255, 127,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(116.89,150.86) scale(5.40)' color='rgb(255, 127,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(160.88,109.68) scale(5.40)' color='rgb(255, 127,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(204.87,82.49) scale(5.40)' color='rgb(255, 127,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(248.86,75.98) scale(5.40)' color='rgb(255, 127,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(292.85,79.67) scale(5.40)' color='rgb(255, 127,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(336.84,93.30) scale(5.40)' color='rgb(255, 127,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(380.83,107.59) scale(5.40)' color='rgb(255, 127,   0)'/>
-	<use xlink:href='#gpPt0' transform='translate(424.82,119.20) scale(5.40)' color='rgb(255, 127,   0)'/>
+	<path stroke='rgb(255, 127,   0)'  d='M83.90,194.43 L116.89,151.02 L160.88,110.11 L204.87,82.77 L248.86,70.71 L292.85,79.09 L336.84,91.20 L380.83,105.87
+		L424.82,119.99  '/>	<use xlink:href='#gpPt0' transform='translate(83.90,194.43) scale(5.40)' color='rgb(255, 127,   0)'/>
+	<use xlink:href='#gpPt0' transform='translate(116.89,151.02) scale(5.40)' color='rgb(255, 127,   0)'/>
+	<use xlink:href='#gpPt0' transform='translate(160.88,110.11) scale(5.40)' color='rgb(255, 127,   0)'/>
+	<use xlink:href='#gpPt0' transform='translate(204.87,82.77) scale(5.40)' color='rgb(255, 127,   0)'/>
+	<use xlink:href='#gpPt0' transform='translate(248.86,70.71) scale(5.40)' color='rgb(255, 127,   0)'/>
+	<use xlink:href='#gpPt0' transform='translate(292.85,79.09) scale(5.40)' color='rgb(255, 127,   0)'/>
+	<use xlink:href='#gpPt0' transform='translate(336.84,91.20) scale(5.40)' color='rgb(255, 127,   0)'/>
+	<use xlink:href='#gpPt0' transform='translate(380.83,105.87) scale(5.40)' color='rgb(255, 127,   0)'/>
+	<use xlink:href='#gpPt0' transform='translate(424.82,119.99) scale(5.40)' color='rgb(255, 127,   0)'/>
 </g>
 	</g>
 	<g id="gnuplot_plot_5" ><title>Trapezoid Self Scheduling</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(152,  78, 163)'  d='M83.90,194.41 L88.40,194.41 M83.90,194.41 L88.40,194.41 M116.89,151.62 L116.89,151.56 M112.39,151.62 L121.39,151.62
-		M112.39,151.56 L121.39,151.56 M160.88,111.74 L160.88,111.48 M156.38,111.74 L165.38,111.74 M156.38,111.48 L165.38,111.48
-		M204.87,88.91 L204.87,87.86 M200.37,88.91 L209.37,88.91 M200.37,87.86 L209.37,87.86 M248.86,67.30 L248.86,67.28
-		M244.36,67.30 L253.36,67.30 M244.36,67.28 L253.36,67.28 M292.85,89.10 L292.85,88.87 M288.35,89.10 L297.35,89.10
-		M288.35,88.87 L297.35,88.87 M336.84,99.92 L336.84,98.68 M332.34,99.92 L341.34,99.92 M332.34,98.68 L341.34,98.68
-		M380.83,103.86 M376.33,103.86 L385.33,103.86 M376.33,103.86 L385.33,103.86 M424.82,128.00 L424.82,123.95 M420.32,128.00
-		L424.82,128.00 M420.32,123.95 L424.82,123.95  '/></g>
+	<path stroke='rgb(152,  78, 163)'  d='M83.90,194.41 L88.40,194.41 M83.90,194.41 L88.40,194.41 M116.89,151.74 M112.39,151.74 L121.39,151.74 M112.39,151.74
+		L121.39,151.74 M160.88,112.03 L160.88,111.85 M156.38,112.03 L165.38,112.03 M156.38,111.85 L165.38,111.85 M204.87,88.59
+		M200.37,88.59 L209.37,88.59 M200.37,88.59 L209.37,88.59 M248.86,57.01 L248.86,56.48 M244.36,57.01 L253.36,57.01
+		M244.36,56.48 L253.36,56.48 M292.85,90.94 L292.85,90.40 M288.35,90.94 L297.35,90.94 M288.35,90.40 L297.35,90.40
+		M336.84,100.39 L336.84,99.98 M332.34,100.39 L341.34,100.39 M332.34,99.98 L341.34,99.98 M380.83,102.96 M376.33,102.96
+		L385.33,102.96 M376.33,102.96 L385.33,102.96 M424.82,122.11 M420.32,122.11 L424.82,122.11 M420.32,122.11 L424.82,122.11
+		 '/></g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<use xlink:href='#gpPt3' transform='translate(83.90,194.41) scale(5.40)' color='rgb(152,  78, 163)'/>
-	<use xlink:href='#gpPt3' transform='translate(116.89,151.59) scale(5.40)' color='rgb(152,  78, 163)'/>
-	<use xlink:href='#gpPt3' transform='translate(160.88,111.61) scale(5.40)' color='rgb(152,  78, 163)'/>
-	<use xlink:href='#gpPt3' transform='translate(204.87,88.38) scale(5.40)' color='rgb(152,  78, 163)'/>
-	<use xlink:href='#gpPt3' transform='translate(248.86,67.29) scale(5.40)' color='rgb(152,  78, 163)'/>
-	<use xlink:href='#gpPt3' transform='translate(292.85,88.99) scale(5.40)' color='rgb(152,  78, 163)'/>
-	<use xlink:href='#gpPt3' transform='translate(336.84,99.30) scale(5.40)' color='rgb(152,  78, 163)'/>
-	<use xlink:href='#gpPt3' transform='translate(380.83,103.86) scale(5.40)' color='rgb(152,  78, 163)'/>
-	<use xlink:href='#gpPt3' transform='translate(424.82,125.97) scale(5.40)' color='rgb(152,  78, 163)'/>
+	<use xlink:href='#gpPt3' transform='translate(116.89,151.74) scale(5.40)' color='rgb(152,  78, 163)'/>
+	<use xlink:href='#gpPt3' transform='translate(160.88,111.94) scale(5.40)' color='rgb(152,  78, 163)'/>
+	<use xlink:href='#gpPt3' transform='translate(204.87,88.59) scale(5.40)' color='rgb(152,  78, 163)'/>
+	<use xlink:href='#gpPt3' transform='translate(248.86,56.75) scale(5.40)' color='rgb(152,  78, 163)'/>
+	<use xlink:href='#gpPt3' transform='translate(292.85,90.67) scale(5.40)' color='rgb(152,  78, 163)'/>
+	<use xlink:href='#gpPt3' transform='translate(336.84,100.18) scale(5.40)' color='rgb(152,  78, 163)'/>
+	<use xlink:href='#gpPt3' transform='translate(380.83,102.96) scale(5.40)' color='rgb(152,  78, 163)'/>
+	<use xlink:href='#gpPt3' transform='translate(424.82,122.11) scale(5.40)' color='rgb(152,  78, 163)'/>
 </g>
 	</g>
 	<g id="gnuplot_plot_6" ><title>gnuplot_plot_6</title>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<path stroke='rgb(152,  78, 163)'  d='M83.90,194.41 L116.89,151.59 L160.88,111.61 L204.87,88.38 L248.86,67.29 L292.85,88.99 L336.84,99.30 L380.83,103.86
-		L424.82,125.97  '/>	<use xlink:href='#gpPt3' transform='translate(83.90,194.41) scale(5.40)' color='rgb(152,  78, 163)'/>
-	<use xlink:href='#gpPt3' transform='translate(116.89,151.59) scale(5.40)' color='rgb(152,  78, 163)'/>
-	<use xlink:href='#gpPt3' transform='translate(160.88,111.61) scale(5.40)' color='rgb(152,  78, 163)'/>
-	<use xlink:href='#gpPt3' transform='translate(204.87,88.38) scale(5.40)' color='rgb(152,  78, 163)'/>
-	<use xlink:href='#gpPt3' transform='translate(248.86,67.29) scale(5.40)' color='rgb(152,  78, 163)'/>
-	<use xlink:href='#gpPt3' transform='translate(292.85,88.99) scale(5.40)' color='rgb(152,  78, 163)'/>
-	<use xlink:href='#gpPt3' transform='translate(336.84,99.30) scale(5.40)' color='rgb(152,  78, 163)'/>
-	<use xlink:href='#gpPt3' transform='translate(380.83,103.86) scale(5.40)' color='rgb(152,  78, 163)'/>
-	<use xlink:href='#gpPt3' transform='translate(424.82,125.97) scale(5.40)' color='rgb(152,  78, 163)'/>
+	<path stroke='rgb(152,  78, 163)'  d='M83.90,194.41 L116.89,151.74 L160.88,111.94 L204.87,88.59 L248.86,56.75 L292.85,90.67 L336.84,100.18 L380.83,102.96
+		L424.82,122.11  '/>	<use xlink:href='#gpPt3' transform='translate(83.90,194.41) scale(5.40)' color='rgb(152,  78, 163)'/>
+	<use xlink:href='#gpPt3' transform='translate(116.89,151.74) scale(5.40)' color='rgb(152,  78, 163)'/>
+	<use xlink:href='#gpPt3' transform='translate(160.88,111.94) scale(5.40)' color='rgb(152,  78, 163)'/>
+	<use xlink:href='#gpPt3' transform='translate(204.87,88.59) scale(5.40)' color='rgb(152,  78, 163)'/>
+	<use xlink:href='#gpPt3' transform='translate(248.86,56.75) scale(5.40)' color='rgb(152,  78, 163)'/>
+	<use xlink:href='#gpPt3' transform='translate(292.85,90.67) scale(5.40)' color='rgb(152,  78, 163)'/>
+	<use xlink:href='#gpPt3' transform='translate(336.84,100.18) scale(5.40)' color='rgb(152,  78, 163)'/>
+	<use xlink:href='#gpPt3' transform='translate(380.83,102.96) scale(5.40)' color='rgb(152,  78, 163)'/>
+	<use xlink:href='#gpPt3' transform='translate(424.82,122.11) scale(5.40)' color='rgb(152,  78, 163)'/>
 </g>
 	</g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
