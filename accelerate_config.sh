@@ -350,7 +350,7 @@ EOF
   gnuplot_script_key=$(mktemp)
 
   cat > "$gnuplot_script_key" << EOF
-  set terminal svg size 250,120 enhanced font 'Arial,12'
+  set terminal svg size 250,190 enhanced font 'Arial,12'
   set output '$output_file_key'
 
   set grid
